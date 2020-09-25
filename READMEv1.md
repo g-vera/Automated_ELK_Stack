@@ -50,7 +50,7 @@ Load balancing ensures that the application will be highly _____ available, in a
 - _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
 Due to their function of distributing incoming network traffic, load balancers defend against denial of service (DDoS) attacks. In addition, using a web application firewall and authenticating user credentials will protect against unauthorized access.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ application and system _____ environment.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ applications/files and system _____ environment.
 - _TODO: What does Filebeat watch for?_ Filebeat monitors the log files or locations specified, collects log events and forwards to a log indexer.
 - _TODO: What does Metricbeat record?_ Metricbeat collects metrics from the operating system and services running on the server.
 
@@ -86,7 +86,7 @@ A summary of the access policies in place can be found in the table below.
 | Web-1    | No                  | 52.191.143.223                                  |
 | Web-2    | No                  | 52.191.143.223                                  |
 | Web-3    | No                  | 52.191.143.223                                  |
-| RedLB    | Yes                 | Any Public                                      |
+| RedLB    | Yes                 | Any Public IP                                   |
 | ELK-1    | No                  | 10.0.0.11, 10.0.0.12, 10.0.0.13, 52.191.143.223 |
 
 ### Elk Configuration
@@ -100,13 +100,12 @@ Increases security configuration
 
 The playbook implements the following tasks:
 - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- Install pip3
+- Install python-pip3
 - Install docker
-- Install python
 - Increases virtual memory
 - download ELK image
 - Run yaml configuration file to install ELK
-- ...
+- Start ELK server
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
@@ -128,23 +127,25 @@ These Beats allow us to collect the following information from each machine:
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
 Filebeat is a lightweight shipper for forwarding and centralizing log data. Filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.
 
+The following screenshot displays the Filebeat dashboard.
 ![Filebeat-1](Images/Filebeat-1.png)
 
 Metricbeat is a lightweight shipper that collects system and services metrics. Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash.
 
+The following screenshot displays the Metricbeat dashboard.
 ![Metricbeat-1](Images/Metricbeat-1.png)
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy the _____ elk-config.yml file to _____ ansible folder.
+- Update the _____ elk-config.yml file to include...IPs and ports.
+- Run the playbook, and navigate to ____ ELK server to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
+- _Which file do you update to make Ansible run the playbook on a specific machine? hosts.cfg  How do I specify which machine to install the ELK server on versus which to install Filebeat on?_ add group that ELK belongs
 - _Which URL do you navigate to in order to check that the ELK server is running?
 
 sudo docker start elk
@@ -155,3 +156,4 @@ http://....:5601/app/kibana
 ![Kibana_Homepage](Images/Kibana_Homepage.png)
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+curl http link
