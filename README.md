@@ -127,21 +127,12 @@ Verify ELK by going to http://104.210.47.56:5601/app/kibana
 
 Commands for downloading the playbooks
 
-install-elk.yml `curl > /etc/ansible/files/install-elk.yml’
+elk-config.yml `curl https://github.com/g-vera/Automated_ELK_Stack/blob/master/Ansible_Scripts/elk-config.yml > /etc/ansible/files/elk-config.yml’
 
+filebeat-config.yml `curl https://github.com/g-vera/Automated_ELK_Stack/blob/master/Ansible_Scripts/filebeat-config.yml > /etc/ansible/files/filebeat-config.yml’
 
+filebeat-playbook.yml `curl https://github.com/g-vera/Automated_ELK_Stack/blob/master/Ansible_Scripts/filebeat-playbook.yml > /etc/ansible/files/filebeat-playbook.yml’
 
-filebeat-config.yml `curl > /etc/ansible/files/filebeat-config.yml’
+metricbeat-config.yml `curl https://github.com/g-vera/Automated_ELK_Stack/blob/master/Ansible_Scripts/metricbeat-config.yml > /etc/ansible/files/metricbeat-config.yml’
 
-
-
-
-filebeat-playbook.yml `curl > /etc/ansible/files/filebeat-playbook.yml’
-
-
-
-metricbeat-config.yml `curl > /etc/ansible/files/metricbeat-config.yml’
-
-
-
-metricbeat-playbook.yml `curl > /etc/ansible/files/metricbeat-playbook.yml’
+metricbeat-playbook.yml `curl https://github.com/g-vera/Automated_ELK_Stack/blob/master/Ansible_Scripts/metricbeat-playbook.yml > /etc/ansible/files/metricbeat-playbook.yml’
