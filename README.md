@@ -103,6 +103,7 @@ Filebeat
 Filebeat is a lightweight shipper for forwarding and centralizing log data. Filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.
 
 The following screenshot displays the Filebeat dashboard.
+
 ![Filebeat-1](Images/Filebeat-1.png)
 
 Metricbeat
@@ -110,6 +111,7 @@ Metricbeat
 Metricbeat is a lightweight shipper that collects system and services metrics. Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash.
 
 The following screenshot displays the Metricbeat dashboard.
+
 ![Metricbeat-1](Images/Metricbeat-1.png)
 
 ### Using the Playbook
