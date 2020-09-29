@@ -4,13 +4,13 @@ The files in this repository were used to configure the network depicted below.
 
 ![Azure_VNet_Diagram](Diagrams/Azure_VNet_Diagram.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ filebeat-playbook.yml file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the filebeat-playbook.yml file may be used to install only certain pieces of it, such as Filebeat.
 
 [elk-config.yml](Ansible_Scripts/elk-config.yml)
 [filebeat-config.yml](Ansible_Scripts/filebeat-config.yml)
 [filebeat-playbook.yml](Ansible_Scripts/filebeat-playbook.yml)
 [metricbeat-config.yml](Ansible_Scripts/metricbeat-config.yml)
-[metricbeat-playbook.yml](Ansible_Scriptsmetricbeat-playbook.yml)
+[metricbeat-playbook.yml](Ansible_Scripts/metricbeat-playbook.yml)
 
 This document contains the following details:
 
